@@ -15,7 +15,8 @@ body {
 }
 
 #cloud {
-  margin-left: 50px;
+  margin-left: 90px;
+  width: 22%;
   transition: 1s;
 }
 
