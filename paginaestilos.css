@@ -9,29 +9,31 @@ body {
   font-family: "Titillium Web", sans-serif;
 }
 
-#imgMusic{
+#imgMusic {
   position: relative;
-  animation-name: hola;
-  animation-duration: 1s;
+  animation-name: zoom;
+  animation-duration: 600ms;
 }
-@keyframes hola {
+@keyframes zoom {
   0% {
-    top:700px;
+    opacity: 0%;
+    transform: scale(0);
   }
   100% {
-    top:0px;
+    transform:scale(1);
   }
 }
 
 .titulo {
-  animation-name: zoom;
+  animation-name: slideTitle;
   position: relative;
   animation-duration: 1s;
   animation-iteration-count: 1;
 }
 
-@keyframes zoom {
+@keyframes slideTitle {
   0% {
+    filter: blur(3px);
     left: -600px;
   }
   100% {
@@ -43,23 +45,27 @@ body {
   margin-left: 90px;
   width: 22%;
   transition: 1s;
-  filter:drop-shadow(20px 0px red);
+  filter: drop-shadow(20px 0px red);
 }
-
 
 .cloud:hover {
   transform: scale(1.2);
   transition: 1s;
 }
 
+.titulo::first-letter{
+  color:red;
+}
+
 .games {
-  color: #f44336;
+  color: black;
   font-size: 35px;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
 }
-.adrenaline {
-  color: black;
+
+.adrenaline{
+  color:black;
   font-size: 35px;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
@@ -104,11 +110,8 @@ a:visited {
 .container {
   justify-content: center;
   position: relative;
-  height: 60vh;
-  width: 60vw;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20vh;
 }
 
 #twitter:hover {
